@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Phone, MapPin, Clock, ShieldCheck, Lock, ExternalLink } from 'lucide-react';
 import { useLanguage } from '@/lib/languageContext';
 
@@ -20,8 +21,14 @@ export default function Footer() {
           {/* Brand & Summary */}
           <div className="md:col-span-1 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-amber-600 flex items-center justify-center text-white font-bold text-xl shadow">
-                द
+              <div className="relative w-11 h-11 rounded-full overflow-hidden border-2 border-amber-500/80 shadow shrink-0 bg-slate-800">
+                <Image
+                  src="/logo.jpg"
+                  alt="दुर्गा एसोसिएट्स लोगो"
+                  width={44}
+                  height={44}
+                  className="w-full h-full object-cover object-top"
+                />
               </div>
               <div className="font-bold text-white text-base">
                 दुर्गा एसोसिएट्स <span className="text-amber-400">& प्रॉपर्टी डीलर</span>
@@ -44,6 +51,11 @@ export default function Footer() {
               प्रमुख सेवाएँ
             </h4>
             <ul className="space-y-2 text-xs">
+              <li>
+                <Link href="/#properties" className="text-amber-400 font-bold hover:text-amber-300 flex items-center gap-1">
+                  <span>🔥 बिकाऊ संपत्तियां (Properties For Sale)</span>
+                </Link>
+              </li>
               <li><Link href="/#services" className="hover:text-amber-300">विक्रय पत्र / बैनामा (Sale Deed)</Link></li>
               <li><Link href="/#services" className="hover:text-amber-300">दान पत्र - परिवार/अन्य (Gift Deed)</Link></li>
               <li><Link href="/#services" className="hover:text-amber-300">हकत्याग पत्र (Release Deed)</Link></li>

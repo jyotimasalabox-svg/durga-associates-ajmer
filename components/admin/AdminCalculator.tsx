@@ -534,16 +534,24 @@ export default function AdminCalculator({ onSaveAsClient, rates }: Props) {
             {/* Actual Printable Letterhead Quote */}
             <div className="printable-card border border-slate-300 p-6 rounded-2xl bg-white text-slate-900">
               {/* Header */}
-              <div className="text-center pb-4 border-b-2 border-slate-900">
-                <h1 className="text-2xl font-black text-[#0B1B3D]">दुर्गा एसोसिएट्स एंड प्रॉपर्टी डीलर</h1>
-                <p className="text-xs font-semibold text-slate-700">
-                  अजमेर कलेक्ट्रेट एवं सब-रजिस्ट्रार कार्यालय प्रथम व द्वितीय अधिकृत सेवा केंद्र
-                </p>
-                <p className="text-[11px] text-slate-600 mt-0.5">
-                  संपर्क: 9829261354, 8003987152 | कलेक्ट्री परिसर के निकट, अजमेर (राजस्थान)
-                </p>
-                <div className="mt-2 inline-block px-3 py-0.5 rounded bg-slate-100 text-[11px] font-bold uppercase tracking-wider text-slate-800 border border-slate-300">
-                  रजिस्ट्री व स्टाम्प शुल्क आधिकारिक अनुमान (Official Fee Quotation)
+              <div className="flex items-center justify-center gap-4 pb-4 border-b-2 border-slate-900">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/logo.jpg"
+                  alt="दुर्गा एसोसिएट्स"
+                  className="w-14 h-14 rounded-full object-cover object-top border-2 border-amber-600 shrink-0"
+                />
+                <div className="text-center">
+                  <h1 className="text-2xl font-black text-[#0B1B3D]">दुर्गा एसोसिएट्स एंड प्रॉपर्टी डीलर</h1>
+                  <p className="text-xs font-semibold text-slate-700">
+                    अजमेर कलेक्ट्रेट एवं सब-रजिस्ट्रार कार्यालय प्रथम व द्वितीय अधिकृत सेवा केंद्र
+                  </p>
+                  <p className="text-[11px] text-slate-600 mt-0.5">
+                    संपर्क: 9829261354, 8003987152 | कलेक्ट्री परिसर के निकट, अजमेर (राजस्थान)
+                  </p>
+                  <div className="mt-2 inline-block px-3 py-0.5 rounded bg-slate-100 text-[11px] font-bold uppercase tracking-wider text-slate-800 border border-slate-300">
+                    रजिस्ट्री व स्टाम्प शुल्क आधिकारिक अनुमान (Official Fee Quotation)
+                  </div>
                 </div>
               </div>
 

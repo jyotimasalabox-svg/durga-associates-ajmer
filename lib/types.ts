@@ -210,3 +210,23 @@ export interface PublicInquiry {
   status: 'new' | 'contacted' | 'converted' | 'closed';
   createdAt: string;
 }
+
+export type PropertyTypeKey = 'plot' | 'house' | 'commercial' | 'flat' | 'farm_house' | 'other';
+
+export interface SaleProperty {
+  id: string;
+  serialNo: number; // क्र सं (e.g. 1, 2, 3...)
+  title: string; // e.g. "विराट नगर, अजमेर में प्लाट बिकाऊ है"
+  location: string; // e.g. "विराट नगर, अजमेर" or "धोला भाटा, अजमेर"
+  areaSqYard: string; // वर्गगज e.g. "130", "158", "100.93"
+  propertyType: PropertyTypeKey;
+  propertyTypeLabel?: string; // "प्लाट", "मकान", "3 मंजिला मकान", "कार्नर प्लाट"
+  features?: string[]; // ["ADA APPROVED", "Loanable", "East Facing", "100फीट रोड"]
+  isNewUpdate?: boolean; // NEW UPDATE section in photo
+  status: 'available' | 'sold';
+  priceEstimate?: string; // e.g. "उचित मूल्य / संपर्क करें"
+  contactPhones: string[]; // ["8003987152", "9829261354"]
+  notes?: string;
+  createdAt: string;
+  updatedAt?: string;
+}

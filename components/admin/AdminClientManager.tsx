@@ -985,12 +985,20 @@ export default function AdminClientManager({ onOpenDraft, prefillClient, onClear
 
             {/* Actual Printable Receipt */}
             <div className="printable-card border border-slate-300 p-6 rounded-2xl bg-white text-slate-900 space-y-4">
-              <div className="text-center pb-3 border-b-2 border-slate-900">
-                <h1 className="text-xl font-black text-[#0B1B3D]">दुर्गा एसोसिएट्स एंड प्रॉपर्टी डीलर</h1>
-                <p className="text-xs font-medium text-slate-700">अजमेर कलेक्ट्रेट एवं सब-रजिस्ट्रार कार्यालय सेवा केंद्र</p>
-                <p className="text-[11px] text-slate-600">फोन: 9829261354, 8003987152 | कलेक्ट्री परिसर के पास, अजमेर</p>
-                <div className="mt-2 inline-block px-3 py-0.5 rounded bg-amber-50 border border-amber-300 text-amber-900 text-[11px] font-extrabold uppercase tracking-wider">
-                  आधिकारिक भुगतान पावती (Official Payment Receipt)
+              <div className="flex items-center justify-center gap-4 pb-3 border-b-2 border-slate-900">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/logo.jpg"
+                  alt="दुर्गा एसोसिएट्स"
+                  className="w-14 h-14 rounded-full object-cover object-top border-2 border-amber-600 shrink-0"
+                />
+                <div className="text-center">
+                  <h1 className="text-xl font-black text-[#0B1B3D]">दुर्गा एसोसिएट्स एंड प्रॉपर्टी डीलर</h1>
+                  <p className="text-xs font-medium text-slate-700">अजमेर कलेक्ट्रेट एवं सब-रजिस्ट्रार कार्यालय सेवा केंद्र</p>
+                  <p className="text-[11px] text-slate-600">फोन: 9829261354, 8003987152 | कलेक्ट्री परिसर के पास, अजमेर</p>
+                  <div className="mt-2 inline-block px-3 py-0.5 rounded bg-amber-50 border border-amber-300 text-amber-900 text-[11px] font-extrabold uppercase tracking-wider">
+                    आधिकारिक भुगतान पावती (Official Payment Receipt)
+                  </div>
                 </div>
               </div>
 

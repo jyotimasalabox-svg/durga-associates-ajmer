@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import AdminLogin from '@/components/admin/AdminLogin';
 import AdminCalculator from '@/components/admin/AdminCalculator';
 import AdminClientManager from '@/components/admin/AdminClientManager';
@@ -9,6 +10,7 @@ import AdminDocumentDrafter from '@/components/admin/AdminDocumentDrafter';
 import AdminLedger from '@/components/admin/AdminLedger';
 import AdminRatesManager from '@/components/admin/AdminRatesManager';
 import AdminInquiries from '@/components/admin/AdminInquiries';
+import AdminPropertiesManager from '@/components/admin/AdminPropertiesManager';
 import { ClientRecord, PublicInquiry, RateRule } from '@/lib/types';
 import { 
   Calculator, 
@@ -17,6 +19,7 @@ import {
   Wallet, 
   Scale, 
   Inbox, 
+  Building2,
   Lock, 
   LogOut, 
   ExternalLink, 
@@ -28,7 +31,7 @@ import {
   Home
 } from 'lucide-react';
 
-type AdminTab = 'calculator' | 'clients' | 'drafter' | 'ledger' | 'rates' | 'inquiries';
+type AdminTab = 'calculator' | 'clients' | 'drafter' | 'ledger' | 'rates' | 'inquiries' | 'properties';
 
 export default function AdminPage() {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
@@ -130,8 +133,16 @@ export default function AdminPage() {
     return (
       <div className="min-h-screen bg-[#F1F5F9] flex flex-col justify-between">
         <header className="bg-[#0B1B3D] text-white p-4 shadow-md flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 font-bold text-base hover:text-amber-300 transition">
-            <Home className="w-4 h-4 text-amber-400" />
+          <Link href="/" className="flex items-center gap-3 font-bold text-base hover:text-amber-300 transition">
+            <div className="relative w-8 h-8 rounded-full overflow-hidden border border-amber-400 shadow shrink-0 bg-slate-800">
+              <Image
+                src="/logo.jpg"
+                alt="दुर्गा एसोसिएट्स लोगो"
+                width={32}
+                height={32}
+                className="w-full h-full object-cover object-top"
+              />
+            </div>
             <span>दुर्गा एसोसिएट्स एंड प्रॉपर्टी डीलर, अजमेर</span>
           </Link>
           <Link
@@ -160,8 +171,14 @@ export default function AdminPage() {
             
             {/* Brand Title */}
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center text-white font-extrabold text-xl shadow">
-                द
+              <div className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-amber-400 shadow shrink-0 bg-slate-800">
+                <Image
+                  src="/logo.jpg"
+                  alt="दुर्गा एसोसिएट्स लोगो"
+                  width={40}
+                  height={40}
+                  className="w-full h-full object-cover object-top"
+                />
               </div>
               <div>
                 <div className="font-extrabold text-sm sm:text-base text-white flex items-center gap-2">
@@ -282,6 +299,21 @@ export default function AdminPage() {
               <Inbox className="w-4 h-4" />
               <span>वेबसाइट पूछताछ</span>
             </button>
+
+            <button
+              onClick={() => setActiveTab('properties')}
+              className={`px-3.5 py-2 rounded-xl flex items-center gap-2 whitespace-nowrap transition cursor-pointer ${
+                activeTab === 'properties'
+                  ? 'bg-amber-500 text-slate-950 shadow-md font-black'
+                  : 'text-slate-300 hover:text-white hover:bg-slate-800'
+              }`}
+            >
+              <Building2 className="w-4 h-4 text-amber-400" />
+              <span>बिकाऊ प्रॉपर्टी (Listings)</span>
+              <span className="text-[10px] bg-rose-600 text-white px-1.5 py-0.5 rounded-full font-black animate-pulse">
+                हॉट
+              </span>
+            </button>
           </div>
 
         </div>
@@ -318,6 +350,10 @@ export default function AdminPage() {
 
         {activeTab === 'inquiries' && (
           <AdminInquiries onConvertToClient={handleConvertInquiryToClient} />
+        )}
+
+        {activeTab === 'properties' && (
+          <AdminPropertiesManager />
         )}
       </main>
 

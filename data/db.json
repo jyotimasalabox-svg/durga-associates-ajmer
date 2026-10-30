@@ -579,5 +579,243 @@
   "adminAuth": {
     "pinHash": "1234",
     "lastLogin": "2026-10-30T03:48:19.772Z"
-  }
+  },
+  "properties": [
+    {
+      "id": "prop-1",
+      "serialNo": 1,
+      "title": "विराट नगर, अजमेर में प्लाट बिकाऊ है",
+      "location": "विराट नगर, अजमेर",
+      "areaSqYard": "130",
+      "propertyType": "plot",
+      "propertyTypeLabel": "प्लाट",
+      "features": [
+        "विराट नगर",
+        "आवासीय"
+      ],
+      "isNewUpdate": false,
+      "status": "available",
+      "priceEstimate": "उचित मूल्य (सम्पर्क करें)",
+      "contactPhones": [
+        "8003987152",
+        "9829261354"
+      ],
+      "notes": "विराट नगर, अजमेर में प्राइम लोकेशन पर 130 वर्गगज का उत्तम प्लाट। तुरन्त रजिस्ट्री योग्य।",
+      "createdAt": "2026-10-30T10:00:00Z"
+    },
+    {
+      "id": "prop-2",
+      "serialNo": 2,
+      "title": "कपिल वस्तु कॉलोनी, धोला भाटा, अजमेर में मकान बिकाऊ है",
+      "location": "कपिल वस्तु कॉलोनी, धोला भाटा, अजमेर",
+      "areaSqYard": "158",
+      "propertyType": "house",
+      "propertyTypeLabel": "मकान",
+      "features": [
+        "धोला भाटा",
+        "कपिल वस्तु कॉलोनी",
+        "निर्मित मकान"
+      ],
+      "isNewUpdate": false,
+      "status": "available",
+      "priceEstimate": "उचित मूल्य (सम्पर्क करें)",
+      "contactPhones": [
+        "8003987152",
+        "9829261354"
+      ],
+      "notes": "कपिल वस्तु कॉलोनी, धोला भाटा में 158 वर्गगज का सुसज्जित मकान बिकाऊ। पानी-बिजली व सड़क की पूरी सुविधा।",
+      "createdAt": "2026-10-30T10:01:00Z"
+    },
+    {
+      "id": "prop-3",
+      "serialNo": 3,
+      "title": "पंचवटी कॉलोनी, सुभाष नगर, अजमेर में बिकाऊ है East Facing",
+      "location": "पंचवटी कॉलोनी, सुभाष नगर, अजमेर",
+      "areaSqYard": "200",
+      "propertyType": "plot",
+      "propertyTypeLabel": "प्लाट / संपत्ति",
+      "features": [
+        "East Facing",
+        "पूर्व मुखी",
+        "सुभाष नगर",
+        "पंचवटी"
+      ],
+      "isNewUpdate": false,
+      "status": "available",
+      "priceEstimate": "उचित मूल्य (सम्पर्क करें)",
+      "contactPhones": [
+        "8003987152",
+        "9829261354"
+      ],
+      "notes": "सुभाष नगर, पंचवटी कॉलोनी में 200 वर्गगज का पूर्व मुखी (East Facing) शुभ भूखंड। वास्तु अनुकूल उत्तम निवेश।",
+      "createdAt": "2026-10-30T10:02:00Z"
+    },
+    {
+      "id": "prop-4",
+      "serialNo": 4,
+      "title": "गुरुनानक कॉलोनी धोला भाटा अजमेर में मकान बिकाऊ है (हाऊसिंग) Loanable",
+      "location": "गुरुनानक कॉलोनी, धोला भाटा, अजमेर",
+      "areaSqYard": "150",
+      "propertyType": "house",
+      "propertyTypeLabel": "मकान (हाऊसिंग)",
+      "features": [
+        "हाऊसिंग",
+        "Loanable",
+        "बैंक लोन सुविधा",
+        "धोला भाटा"
+      ],
+      "isNewUpdate": false,
+      "status": "available",
+      "priceEstimate": "उचित मूल्य (सम्पर्क करें)",
+      "contactPhones": [
+        "8003987152",
+        "9829261354"
+      ],
+      "notes": "गुरुनानक कॉलोनी धोला भाटा में 150 वर्गगज का हाऊसिंग मकान। सभी प्रमुख बैंकों से लोन योग्य (Loanable)।",
+      "createdAt": "2026-10-30T10:03:00Z"
+    },
+    {
+      "id": "prop-5",
+      "serialNo": 5,
+      "title": "भरत वाटिका धोला भाटा अजमेर में 100फीट रोड पर प्लाट मकान बिकाऊ है –ADA APPROVED",
+      "location": "भरत वाटिका, धोला भाटा, अजमेर",
+      "areaSqYard": "150",
+      "propertyType": "house",
+      "propertyTypeLabel": "प्लाट व मकान",
+      "features": [
+        "ADA APPROVED",
+        "100फीट रोड",
+        "एडीए स्वीकृत",
+        "धोला भाटा"
+      ],
+      "isNewUpdate": false,
+      "status": "available",
+      "priceEstimate": "उचित मूल्य (सम्पर्क करें)",
+      "contactPhones": [
+        "8003987152",
+        "9829261354"
+      ],
+      "notes": "100 फीट मुख्य सड़क पर भरत वाटिका, धोला भाटा में 150 वर्गगज प्लाट/मकान। एडीए से पूर्णतः अनुमोदित (ADA Approved)।",
+      "createdAt": "2026-10-30T10:04:00Z"
+    },
+    {
+      "id": "prop-6",
+      "serialNo": 6,
+      "title": "कपिल वस्तु कॉलोनी, धोला भाटा, अजमेर में प्लाट बिकाऊ है",
+      "location": "कपिल वस्तु कॉलोनी, धोला भाटा, अजमेर",
+      "areaSqYard": "205",
+      "propertyType": "plot",
+      "propertyTypeLabel": "प्लाट",
+      "features": [
+        "धोला भाटा",
+        "कपिल वस्तु कॉलोनी",
+        "बड़ा भूखंड"
+      ],
+      "isNewUpdate": false,
+      "status": "available",
+      "priceEstimate": "उचित मूल्य (सम्पर्क करें)",
+      "contactPhones": [
+        "8003987152",
+        "9829261354"
+      ],
+      "notes": "कपिल वस्तु कॉलोनी धोला भाटा में 205 वर्गगज का बड़ा व खुला भूखंड। सुंदर व शांत वातावरण में घर बनाने योग्य।",
+      "createdAt": "2026-10-30T10:05:00Z"
+    },
+    {
+      "id": "prop-7",
+      "serialNo": 7,
+      "title": "नरेली जयपुर हाईवे के पास कार्नर प्लाट बिकाऊ है",
+      "location": "नरेली, जयपुर हाईवे के पास, अजमेर",
+      "areaSqYard": "110",
+      "propertyType": "plot",
+      "propertyTypeLabel": "कार्नर प्लाट",
+      "features": [
+        "कार्नर प्लाट",
+        "Corner",
+        "जयपुर हाईवे",
+        "नरेली"
+      ],
+      "isNewUpdate": false,
+      "status": "available",
+      "priceEstimate": "उचित मूल्य (सम्पर्क करें)",
+      "contactPhones": [
+        "8003987152",
+        "9829261354"
+      ],
+      "notes": "जयपुर हाईवे के अत्यंत निकट नरेली में 110 वर्गगज का दो तरफा खुला कॉर्नर प्लाट। व्यावसायिक व आवासीय दोनों हेतु उत्तम।",
+      "createdAt": "2026-10-30T10:06:00Z"
+    },
+    {
+      "id": "prop-8",
+      "serialNo": 8,
+      "title": "फरीदाबाद, भगवानगंज में मकान नं. 14 बिकाऊ है",
+      "location": "फरीदाबाद, भगवानगंज, अजमेर",
+      "areaSqYard": "40",
+      "propertyType": "house",
+      "propertyTypeLabel": "मकान नं. 14",
+      "features": [
+        "NEW UPDATE",
+        "मकान नं. 14",
+        "भगवानगंज",
+        "बजट मकान"
+      ],
+      "isNewUpdate": true,
+      "status": "available",
+      "priceEstimate": "उचित बजट मूल्य (सम्पर्क करें)",
+      "contactPhones": [
+        "8003987152",
+        "9829261354"
+      ],
+      "notes": "NEW UPDATE: भगवानगंज, फरीदाबाद में मकान नंबर 14, कुल 40 वर्गगज का कॉम्पैक्ट बजट मकान बिकाऊ। तुरंत दखल कब्ज़ा।",
+      "createdAt": "2026-10-30T10:07:00Z"
+    },
+    {
+      "id": "prop-9",
+      "serialNo": 9,
+      "title": "कपिल वस्तु कॉलोनी, धोला भाटा, अजमेर में कार्नर प्लाट बिकाऊ है",
+      "location": "कपिल वस्तु कॉलोनी, धोला भाटा, अजमेर",
+      "areaSqYard": "100.93",
+      "propertyType": "plot",
+      "propertyTypeLabel": "कार्नर प्लाट",
+      "features": [
+        "NEW UPDATE",
+        "Corner Plot",
+        "कार्नर प्लाट",
+        "धोला भाटा"
+      ],
+      "isNewUpdate": true,
+      "status": "available",
+      "priceEstimate": "उचित मूल्य (सम्पर्क करें)",
+      "contactPhones": [
+        "8003987152",
+        "9829261354"
+      ],
+      "notes": "NEW UPDATE: कपिल वस्तु कॉलोनी, धोला भाटा में 100.93 वर्गगज का कॉर्नर प्लाट। हवादार व दो तरफा रास्ता।",
+      "createdAt": "2026-10-30T10:08:00Z"
+    },
+    {
+      "id": "prop-10",
+      "serialNo": 10,
+      "title": "गहलोतों की डुगरी, वांद डेयरी के पास 3 मंजिला मकान बिकाऊ है",
+      "location": "गहलोतों की डुगरी, वांद डेयरी के पास, अजमेर",
+      "areaSqYard": "90",
+      "propertyType": "house",
+      "propertyTypeLabel": "3 मंजिला मकान",
+      "features": [
+        "NEW UPDATE",
+        "3 मंजिला मकान",
+        "वांद डेयरी",
+        "गहलोतों की डुगरी"
+      ],
+      "isNewUpdate": true,
+      "status": "available",
+      "priceEstimate": "उचित मूल्य (सम्पर्क करें)",
+      "contactPhones": [
+        "8003987152",
+        "9829261354"
+      ],
+      "notes": "NEW UPDATE: गहलोतों की डुगरी, वांद डेयरी के समीप 90 वर्गगज में निर्मित भव्य 3 मंजिला पक्का मकान बिकाऊ। किराए व रहने हेतु सर्वोत्तम।",
+      "createdAt": "2026-10-30T10:09:00Z"
+    }
+  ]
 }

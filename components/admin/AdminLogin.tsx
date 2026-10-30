@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { Lock, ShieldCheck, KeyRound, AlertCircle, ArrowRight } from 'lucide-react';
 
 export default function AdminLogin({ onLoginSuccess }: { onLoginSuccess: (token: string) => void }) {
@@ -46,8 +47,15 @@ export default function AdminLogin({ onLoginSuccess }: { onLoginSuccess: (token:
         
         {/* Top Header Banner */}
         <div className="bg-gradient-to-br from-[#071228] via-[#0B1B3D] to-[#162E66] text-white p-8 text-center relative overflow-hidden">
-          <div className="w-14 h-14 mx-auto rounded-2xl bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center text-white font-extrabold text-2xl shadow-lg border border-amber-300/40 mb-3">
-            द
+          <div className="relative w-20 h-20 mx-auto rounded-full overflow-hidden border-2 border-amber-400 shadow-xl mb-3 bg-slate-800">
+            <Image
+              src="/logo.jpg"
+              alt="दुर्गा एसोसिएट्स लोगो"
+              width={80}
+              height={80}
+              className="w-full h-full object-cover object-top"
+              priority
+            />
           </div>
           <h2 className="text-xl font-black tracking-tight text-white">
             दुर्गा एसोसिएट्स एंड प्रॉपर्टी डीलर

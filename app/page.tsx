@@ -1,12 +1,14 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import ServicesSection from '@/components/ServicesSection';
 import ProcessGuide from '@/components/ProcessGuide';
 import PublicCalculator from '@/components/PublicCalculator';
 import DocumentChecklist from '@/components/DocumentChecklist';
 import ContactSection from '@/components/ContactSection';
+import PropertyListingsSection from '@/components/PropertyListingsSection';
 import Footer from '@/components/Footer';
 import { 
   ShieldCheck, 
@@ -19,9 +21,11 @@ import {
   Scale, 
   Clock, 
   Building,
+  Building2,
   Award,
   FileCheck2,
-  Sparkles
+  Sparkles,
+  Flame
 } from 'lucide-react';
 import { useLanguage } from '@/lib/languageContext';
 
@@ -100,16 +104,27 @@ export default function HomePage() {
               {/* Action Buttons */}
               <div className="flex flex-wrap items-center gap-3.5 pt-4">
                 <a
-                  href="#calculator"
-                  className="px-6 py-3.5 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold text-sm shadow-lg shadow-amber-500/20 transition-all flex items-center gap-2 hover:-translate-y-0.5"
+                  href="#properties"
+                  className="px-6 py-3.5 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-amber-400 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-black text-sm shadow-xl shadow-amber-500/25 transition-all flex items-center gap-2 hover:-translate-y-0.5"
                 >
-                  <Calculator className="w-4 h-4 text-slate-950" />
-                  <span>रजिस्ट्री शुल्क कैलकुलेटर</span>
+                  <Building2 className="w-4 h-4 text-slate-950" />
+                  <span>बिकाऊ प्रॉपर्टीज़ देखें</span>
+                  <span className="text-[10px] bg-red-600 text-white px-1.5 py-0.2 rounded-full font-bold">
+                    हॉट लिस्ट
+                  </span>
+                </a>
+
+                <a
+                  href="#calculator"
+                  className="px-5 py-3.5 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-white font-semibold text-sm border border-slate-600 shadow-md transition-all flex items-center gap-2 hover:-translate-y-0.5"
+                >
+                  <Calculator className="w-4 h-4 text-amber-400" />
+                  <span>रजिस्ट्री कैलकुलेटर</span>
                 </a>
 
                 <a
                   href="#contact"
-                  className="px-6 py-3.5 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-white font-semibold text-sm border border-slate-600 shadow-md transition-all flex items-center gap-2 hover:-translate-y-0.5"
+                  className="px-5 py-3.5 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-white font-semibold text-sm border border-slate-600 shadow-md transition-all flex items-center gap-2 hover:-translate-y-0.5"
                 >
                   <CalendarCheck className="w-4 h-4 text-emerald-400" />
                   <span>अपॉइंटमेंट बुक करें</span>
@@ -117,7 +132,7 @@ export default function HomePage() {
 
                 <a
                   href="tel:9829261354"
-                  className="px-5 py-3.5 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 font-semibold text-sm border border-emerald-500/40 transition-all flex items-center gap-2"
+                  className="px-4 py-3.5 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 font-semibold text-sm border border-emerald-500/40 transition-all flex items-center gap-2"
                 >
                   <Phone className="w-4 h-4 text-emerald-400" />
                   <span>9829261354</span>
@@ -130,9 +145,15 @@ export default function HomePage() {
               <div className="bg-slate-900/90 border border-slate-700/80 rounded-3xl p-6 sm:p-8 shadow-2xl backdrop-blur-xl relative">
                 
                 <div className="flex items-center justify-between pb-4 mb-4 border-b border-slate-800">
-                  <div className="flex items-center gap-2.5">
-                    <div className="w-9 h-9 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold">
-                      <Scale className="w-5 h-5" />
+                  <div className="flex items-center gap-3">
+                    <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-amber-400 shadow-md shrink-0 bg-slate-800">
+                      <Image
+                        src="/logo.jpg"
+                        alt="दुर्गा एसोसिएट्स लोगो"
+                        width={48}
+                        height={48}
+                        className="w-full h-full object-cover object-top"
+                      />
                     </div>
                     <div>
                       <h3 className="text-white font-bold text-sm">विधिक सेवा केंद्र • अजमेर</h3>
@@ -233,6 +254,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Featured Properties For Sale Section (Exact Photo Data & Live Admin Managed) */}
+      <PropertyListingsSection />
 
       {/* Services Section */}
       <ServicesSection onSelectService={handleSelectService} />

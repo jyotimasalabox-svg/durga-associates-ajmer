@@ -2,6 +2,8 @@ import { NextResponse } from 'next/server';
 import { getDb, saveDb } from '@/lib/db';
 import { ClientRecord } from '@/lib/types';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET() {
   const db = getDb();
   return NextResponse.json({ success: true, clients: db.clients || [] });

@@ -1,7 +1,8 @@
 import fs from 'fs';
 import path from 'path';
-import { ClientRecord, LedgerEntry, PublicInquiry, RateRule } from './types';
+import { ClientRecord, LedgerEntry, PublicInquiry, RateRule, SaleProperty } from './types';
 import { DEFAULT_RATE_RULES } from './defaultRates';
+import { DEFAULT_SALE_PROPERTIES } from './defaultProperties';
 
 const DATA_DIR = path.join(process.cwd(), 'data');
 const DB_FILE = path.join(DATA_DIR, 'db.json');
@@ -11,6 +12,7 @@ export interface DatabaseSchema {
   clients: ClientRecord[];
   ledger: LedgerEntry[];
   inquiries: PublicInquiry[];
+  properties: SaleProperty[];
   adminAuth: {
     pinHash: string; // Default PIN: 1234 or custom
     lastLogin?: string;
@@ -272,6 +274,7 @@ const INITIAL_DB: DatabaseSchema = {
       createdAt: '2026-10-28T12:10:00Z'
     }
   ],
+  properties: DEFAULT_SALE_PROPERTIES,
   adminAuth: {
     pinHash: '1234' // Default quick pin, can be changed in settings
   }
@@ -306,6 +309,9 @@ function ensureDbFile() {
 
 export function getDb(): DatabaseSchema {
   if (memoryDb) {
+    if (!memoryDb.properties || !Array.isArray(memoryDb.properties)) {
+      memoryDb.properties = DEFAULT_SALE_PROPERTIES;
+    }
     return memoryDb;
   }
   try {
@@ -313,6 +319,10 @@ export function getDb(): DatabaseSchema {
     if (fs.existsSync(TARGET_FILE)) {
       const data = fs.readFileSync(TARGET_FILE, 'utf-8');
       memoryDb = JSON.parse(data) as DatabaseSchema;
+      if (!memoryDb.properties || !Array.isArray(memoryDb.properties)) {
+        memoryDb.properties = DEFAULT_SALE_PROPERTIES;
+        saveDb(memoryDb);
+      }
       return memoryDb;
     }
   } catch (err) {
